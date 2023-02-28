@@ -1,6 +1,6 @@
 id: io.github.fastrizwaan.WineZGUI
 branch: '22.08'
-version: '0.88.6'
+version: '0.92.8'
 runtime: org.freedesktop.Platform
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
@@ -19,14 +19,14 @@ finish-args:
   - --filesystem=~/.local/share/applications
   - --filesystem=~/.local/share/applications/winezgui:create
     # Most Games write to their own directories
-  - --filesystem=host:ro
+  - --filesystem=host
     # Desktop shortcut runs wine script from host
   #- --talk-name=org.freedesktop.Flatpak
   - --share=ipc
   - --share=network
   - --socket=pulseaudio
   - --socket=wayland
-  - --socket=x11
+  - --socket=fallback-x11
   - --system-talk-name=org.freedesktop.UDisks2
   - --talk-name=org.freedesktop.Notifications
 
